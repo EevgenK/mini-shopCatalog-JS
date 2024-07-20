@@ -11,7 +11,7 @@ function createMarkup(arr, elem) {
       <img src="${img}" alt="${name}" width="300"/>
       <h2>${name}</h2>
       <p><a class="js-info" href="#">Більше інформації</a></p>
-      <div>
+      <div class='buuton-box'>
      ${
        isActiveLink()
          ? `<button class=" button js-favorite">Додати до обраного</button>`
