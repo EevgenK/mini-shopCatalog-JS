@@ -32,5 +32,3 @@ function createMarkup(arr, elem) {
   elem.innerHTML = markup;
 }
 export { createMarkup };
-
-// пустий кошик - https://thumbs.dreamstime.com/b/empty-shopping-basket-chrome-8778239.jpg
