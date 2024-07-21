@@ -6,7 +6,9 @@ function createModal(product) {
   const instance = basicLightbox.create(
     `
    <div class="modal js-card" data-id="${product.id}"> 
-    <img src="${product.img}" alt="${product.name}" width="600"/>
+    <img class='modal-img' src="${product.img}" alt="${
+      product.name
+    }" width="600"/>
 	<h2>${product.name}</h2>
 	<h3>${product.price} грн.</h3>
   <p>${product.description}</p>
