@@ -25,7 +25,7 @@ function viewMarketing() {
         values[0].textContent = addLeadingZero((values[0].textContent -= 1));
         values[2].textContent = 24;
       } else if (values[0].textContent < 0) {
-        values[0].textContent = 00;
+        values[0].textContent = addLeadingZero(0);
       }
       if (
         !values[0].textContent &&
