@@ -4,7 +4,7 @@ function viewMarketing() {
   const closeBtn = document.querySelector('.marketing-close-btn');
   const values = document.querySelectorAll('.value');
 
-  const deadLine = Date.parse('2024-07-28');
+  const deadLine = Date.parse('2024-07-29');
   const dateNow2 = Date.now();
   let { days, hours, minutes, seconds } = convertMs(deadLine - dateNow2);
 
@@ -23,15 +23,15 @@ function viewMarketing() {
         values[2].textContent = 60;
       } else if (values[1].textContent < 0) {
         values[0].textContent = addLeadingZero((values[0].textContent -= 1));
-        values[2].textContent = 24;
+        values[1].textContent = 24;
       } else if (values[0].textContent < 0) {
         values[0].textContent = addLeadingZero(0);
       }
       if (
-        !values[0].textContent &&
-        !values[1].textContent &&
-        !values[2].textContent &&
-        !values[3].textContent
+        values[0].textContent === 0 &&
+        values[1].textContent === 0 &&
+        values[2].textContent === 0 &&
+        values[3].textContent === 0
       ) {
         marketingClose();
       }

@@ -24,10 +24,10 @@ function createMarkup(arr, item) {
       .join('');
   } else {
     markup = `
-    <li>
+    <div class='empty'><li>
     <h3>Ваш списоко обраного - порожній. Додайте будьласка товар до "Обраного"</h3>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-Un73Qljof30D6abOmjZHbGJb0ahQMDalA&s" alt="404" width="600"
-      </li>`;
+      <img class='empty-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-Un73Qljof30D6abOmjZHbGJb0ahQMDalA&s" alt="404" width="600"
+      </li></div>`;
   }
 
   item.innerHTML = markup;

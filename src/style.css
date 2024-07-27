@@ -146,4 +146,12 @@ ul {
     font-size: 26px;
     font-weight: 600;
   }
+  .empty {
+    width: 380px;
+    padding: 5px;
+    text-align: center;
+  }
+  .empty-img {
+    width: 380px;
+  }
 }

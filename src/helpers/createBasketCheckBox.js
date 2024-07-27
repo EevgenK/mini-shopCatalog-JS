@@ -30,11 +30,11 @@ function createBasketCheckBox(arr, item) {
       )
       .join('');
   } else {
-    markup = `<li>
+    markup = `<div class='empty'><li>
     <h3>Ваш кошик - порожній. Додайте будьласка товар до "Кошика"</h3>
-      <img src="https://thumbs.dreamstime.com/b/empty-shopping-basket-chrome-8778239.jpg
+      <img class='empty-img' src="https://thumbs.dreamstime.com/b/empty-shopping-basket-chrome-8778239.jpg
 " alt="404" width="600"
-      </li>`;
+      </li></div>`;
   }
   item.innerHTML = markup;
 }
