@@ -14,11 +14,14 @@ ul {
 .nav-link {
   color: #fff;
 }
+.container {
+  padding: 0px 5px 5px 5px;
+}
 .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 5px;
+  padding-left: 0px;
 }
 .item {
   margin: 5px 5px;
@@ -46,14 +49,7 @@ ul {
   margin: 5px;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
-@media screen and (max-width: 600px) {
-  .modal {
-    width: 380px;
-  }
-  .modal-img {
-    width: 320px;
-  }
-}
+
 .modal-button_conteiner {
   display: flex;
   justify-content: space-evenly;
@@ -90,4 +86,64 @@ ul {
 .modal-close-btn {
   margin-left: 90%;
   margin-right: 10px;
+}
+.marketing-box {
+  height: 300px;
+  background-image: url('https://static.dnipro-m.ua/image_storage/blocks/335/uk/original_image_0.71391000 1721029465_mob.png');
+  display: none;
+  border: 1px solid #ff2f00;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.timer {
+  background-color: #ff2f00;
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.value {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.btn-box {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+}
+.marketing-close-btn {
+  background-color: #ff2f00;
+  border: 1px solid #ff2f00;
+  border-radius: 3px;
+}
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 380px;
+  }
+  .modal-img {
+    width: 320px;
+  }
+  .marketing-box {
+    height: 180px;
+  }
+  .timer-text {
+    font-size: 12px;
+  }
+  .value {
+    font-size: 26px;
+    font-weight: 600;
+  }
 }

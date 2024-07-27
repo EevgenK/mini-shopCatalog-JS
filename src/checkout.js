@@ -1,4 +1,5 @@
 import { common } from './common';
+import { viewMarketing } from './marketing/marketing';
 import { createBasketCheckBox } from './helpers/createBasketCheckBox';
 import { onClick } from './helpers/onClick';
 const list = document.querySelector('.js-list');
@@ -21,5 +22,5 @@ function toggleItem(id) {
 
   createBasketCheckBox(check, list);
 }
-
+viewMarketing();
 export { toggleItem };
