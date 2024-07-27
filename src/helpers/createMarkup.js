@@ -1,6 +1,6 @@
 import { isActiveLink } from './isActiveLink';
 
-function createMarkup(arr, elem) {
+function createMarkup(arr, item) {
   let markup;
 
   if (arr.length) {
@@ -29,6 +29,7 @@ function createMarkup(arr, elem) {
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR-Un73Qljof30D6abOmjZHbGJb0ahQMDalA&s" alt="404" width="600"
       </li>`;
   }
-  elem.innerHTML = markup;
+
+  item.innerHTML = markup;
 }
 export { createMarkup };

@@ -1,9 +1,9 @@
 import 'basiclightbox/dist/basicLightbox.min.css';
-import { refs } from './common';
+// import { list } from './common';
 import { createMarkup } from './helpers/createMarkup';
 import { instruments } from './helpers/instruments';
 import { onClick } from './helpers/onClick';
+const list = document.querySelector('.js-list');
+createMarkup(instruments, list);
 
-createMarkup(instruments, refs.list);
-
-refs.list.addEventListener('click', onClick);
+list.addEventListener('click', onClick);

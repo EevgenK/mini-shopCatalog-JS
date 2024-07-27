@@ -1,11 +1,11 @@
 import { duplicateBasket } from './choseItem';
-import { findProduct } from './findProduct';
+
 function createBasketCheckBox(arr, item) {
   let markup;
   if (arr.length) {
     markup = arr
       .map(
-        ({ id, name, img, price }) =>
+        ({ id, name, img, price, isDone }) =>
           ` <li class="item-check js-card" data-id="${id}">
           <div>
           <h4>${name}</h4>
@@ -17,7 +17,13 @@ function createBasketCheckBox(arr, item) {
           } грн.</p></div>
           <img src="${img}" alt="${name}" width="100"/>
           <div class='desition-box'>
-          <input class='item-checkbox'  type="checkbox" name="${name}" id="${id}" />
+          <input 
+          class='item-checkbox'  
+          type="checkbox"
+          
+           ${isDone ? 'checked' : ''}
+          name="${name}" 
+          id="${id} " />
           <button class="js-basket-delete basket-delete" >X</button>
           </div>
           </li>`
@@ -32,4 +38,6 @@ function createBasketCheckBox(arr, item) {
   }
   item.innerHTML = markup;
 }
+
+//
 export { createBasketCheckBox };

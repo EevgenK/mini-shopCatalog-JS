@@ -4,7 +4,7 @@ import { deleteItem } from './deleteItem';
 import { findDuplicateItem } from './findDuplicateItem';
 let duplicateBasket =
   JSON.parse(localStorage.getItem(common.KEY_DUPLICATE_BASKET)) ?? {};
-console.log(duplicateBasket);
+
 function choseItem(e) {
   const favoriteArr =
     JSON.parse(localStorage.getItem(common.KEY_FAVORITE)) ?? [];
@@ -21,7 +21,8 @@ function choseItem(e) {
   }
   if (e.target.classList.contains('js-basket')) {
     const product = findProduct(e.target);
-
+    product.isDone = false;
+    console.log(product);
     const inStorage = findDuplicateItem(basketArr, product);
     if (inStorage) {
       let check = duplicateBasket[product.id];
@@ -29,7 +30,6 @@ function choseItem(e) {
         ? (duplicateBasket[product.id] += 1)
         : (duplicateBasket[product.id] = 2);
 
-      console.log(duplicateBasket);
       localStorage.setItem(
         common.KEY_DUPLICATE_BASKET,
         JSON.stringify(duplicateBasket)
@@ -48,10 +48,11 @@ function choseItem(e) {
     const product = findProduct(e.target);
 
     deleteItem(product, basketArr, common.KEY_BASKET);
+    duplicateBasket[product.id] = 0;
+    localStorage.setItem(
+      common.KEY_DUPLICATE_BASKET,
+      JSON.stringify(duplicateBasket)
+    );
   }
-
-  // let newFavorite = favoriteArr.filter(obj => obj.id !== product.id);
-  // localStorage.setItem(common.KEY_FAVORITE, JSON.stringify(newFavorite));
-  // location.reload();
 }
 export { choseItem, duplicateBasket };

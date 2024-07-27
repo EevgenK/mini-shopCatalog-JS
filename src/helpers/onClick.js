@@ -1,7 +1,8 @@
 import { createModal } from './createModal';
 import { findProduct } from './findProduct';
-
+import { refs, common } from '../common';
 import { choseItem } from './choseItem';
+import { toggleItem } from '../checkout';
 
 function onClick(e) {
   e.preventDefault();
@@ -13,9 +14,13 @@ function onClick(e) {
     modal.addEventListener('click', evt => choseItem(evt));
   }
   if (e.target.classList.contains('item-checkbox')) {
-    console.log('check');
+    // console.log(e.target.id);
+    const id = e.target.id;
+    toggleItem(id);
   }
   choseItem(e);
 }
 
 export { onClick };
+
+//  ${isDone ? 'checked' : ''}
