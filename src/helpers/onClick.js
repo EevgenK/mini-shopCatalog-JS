@@ -18,6 +18,7 @@ function onClick(e) {
     const id = e.target.id;
     toggleItem(id);
   }
+
   choseItem(e);
 }
 

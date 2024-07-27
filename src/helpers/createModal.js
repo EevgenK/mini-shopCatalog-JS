@@ -2,10 +2,12 @@ import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import { closeModal } from './closeModal';
 import { isActiveLink } from './isActiveLink';
+
 function createModal(product) {
   const instance = basicLightbox.create(
     `
-   <div class="modal js-card" data-id="${product.id}"> 
+   <div class="modal js-card" data-id="${product.id}">
+   <button class="modal-close-btn basket-delete" >X</button>
     <img class='modal-img' src="${product.img}" alt="${
       product.name
     }" width="600"/>
@@ -27,6 +29,7 @@ function createModal(product) {
       onShow(instance) {
         this.handler = closeModal.bind(instance);
         document.addEventListener('keydown', this.handler);
+        document.addEventListener('click', this.handler);
       },
       onClose() {
         document.removeEventListener('keydown', this.handler);

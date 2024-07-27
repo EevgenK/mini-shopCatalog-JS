@@ -28,7 +28,8 @@ ul {
 }
 .modal {
   width: 600px;
-
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 10px 10px;
 }
@@ -85,4 +86,8 @@ ul {
   background-color: #ff2f00;
   border: 1px solid #ff2f00;
   border-radius: 3px;
+}
+.modal-close-btn {
+  margin-left: 90%;
+  margin-right: 10px;
 }
