@@ -1,5 +1,5 @@
 const creatMarkupMarketing = `
-<div class='js-apear-box'><div class="marketing-box">
+<div class="marketing-box">
   <div class="btn-box">
     <button class="marketing-close-btn">20</button>
   </div>
@@ -30,7 +30,7 @@ const creatMarkupMarketing = `
       </span>
       <span class="label">Секунд</span>
     </div>
-  </div>
+  
 </div></div>
 `;
 

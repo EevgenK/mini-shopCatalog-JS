@@ -8,8 +8,12 @@ function viewMarketing(list) {
 
   if (saleTime > 0) {
     let saleTimeID = setTimeout(() => {
+      const marketingBox = document.querySelector('.marketing-box');
+      if (marketingBox) {
+        console.log('good');
+      }
       list.insertAdjacentHTML('afterend', creatMarkupMarketing);
-      const marketingBox = document.querySelector('.js-apear-box');
+
       const closeBtn = document.querySelector('.marketing-close-btn');
       const values = document.querySelectorAll('.value');
 
@@ -27,7 +31,7 @@ function viewMarketing(list) {
       intervalID = setInterval(() => {
         saleTime = deadLine - Date.now();
         let dates = convertMs(saleTime);
-        console.log(dates);
+
         for (let i = 0; i < values.length; i++) {
           values[i].textContent = Object.entries(dates)[i][1];
         }
@@ -40,7 +44,8 @@ function viewMarketing(list) {
       function marketingClose() {
         clearInterval(intervalID);
         clearInterval(saleTimeID);
-        marketingBox.style.display = 'none';
+        marketingBox.classList.add('unvisible');
+        marketingBox.innerHTML = '';
       }
     }, 5000);
   }
