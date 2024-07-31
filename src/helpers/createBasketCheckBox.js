@@ -36,7 +36,7 @@ function createBasketCheckBox(arr, item) {
 " alt="404" width="600"
       </li></div>`;
   }
-  item.innerHTML = markup;
+  item.insertAdjacentHTML('afterbegin', markup);
 }
 
 //

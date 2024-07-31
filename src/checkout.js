@@ -22,5 +22,5 @@ function toggleItem(id) {
 
   createBasketCheckBox(check, list);
 }
-viewMarketing();
+viewMarketing(list);
 export { toggleItem };

@@ -16,6 +16,7 @@ ul {
 }
 .container {
   padding: 0px 5px 5px 5px;
+  position: relative;
 }
 .list {
   display: flex;
@@ -90,7 +91,7 @@ ul {
 .marketing-box {
   height: 300px;
   background-image: url('https://static.dnipro-m.ua/image_storage/blocks/335/uk/original_image_0.71391000 1721029465_mob.png');
-  display: none;
+  display: flex;
   border: 1px solid #ff2f00;
   flex-direction: column;
   align-items: flex-end;
@@ -128,6 +129,15 @@ ul {
   background-color: #ff2f00;
   border: 1px solid #ff2f00;
   border-radius: 3px;
+}
+.timer-text {
+  color: white;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+.js-apear-box {
+  position: absolute;
+  bottom: 10px;
 }
 @media screen and (max-width: 600px) {
   .modal {
