@@ -2,21 +2,16 @@ import { creatMarkupMarketing } from './createMarkupMarketing';
 import { convertMs } from './convertMs';
 
 function viewMarketing(list) {
-  const deadLine = Date.parse('2024-08-01');
+  const deadLine = Date.parse('2024-08-03');
   let intervalID = null;
   let saleTime = deadLine - Date.now();
 
   if (saleTime > 0) {
-    let saleTimeID = setTimeout(() => {
-      const marketingBox = document.querySelector('.marketing-box');
-      if (marketingBox) {
-        console.log('good');
-      }
+    const saleTimeID = setTimeout(() => {
       list.insertAdjacentHTML('afterend', creatMarkupMarketing);
-
+      const marketingBox = document.querySelector('.marketing-box');
       const closeBtn = document.querySelector('.marketing-close-btn');
       const values = document.querySelectorAll('.value');
-
       let time = 20;
       let closeIntrvalId = setInterval(() => {
         closeBtn.disabled = true;
